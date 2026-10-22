@@ -10,7 +10,7 @@ It works with any Umbraco AI embedding provider, such as OpenAI or [Pinecone's o
 
 This is a community package. It is not made or supported by Umbraco HQ or Pinecone.
 
-Requires Umbraco 18 (.NET 10) and Umbraco AI Search 18.0.4 or later.
+Requires Umbraco 17 (.NET 10) and Umbraco AI Search 17.0.4 or later.
 
 ## Install
 

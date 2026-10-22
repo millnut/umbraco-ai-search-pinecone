@@ -5,8 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageVersion Include="Umbraco.AI.Search.Core" Version="[18.0.4, 19.0.0)" />
-    <PackageVersion Include="Umbraco.AI.Search.Startup" Version="[18.0.4, 19.0.0)" />
+    <PackageVersion Include="Umbraco.AI.Search.Core" Version="[17.0.4, 18.0.0)" />
+    <PackageVersion Include="Umbraco.AI.Search.Startup" Version="[17.0.4, 18.0.0)" />
 
     <!-- Unit tests -->
     <PackageVersion Include="xunit.v3" Version="4.0.2" />
