@@ -2,7 +2,7 @@
 
 Contributions to this package are most welcome!
 
-There is no test site in the solution. To try the package in a real site, pack it and install it there (see below). The design and the reasoning behind it are in [docs/vector-store-notes.md](../docs/vector-store-notes.md).
+There is no test site in the solution. To try the package in a real site, pack it and install it there (see below).
 
 ## Building
 

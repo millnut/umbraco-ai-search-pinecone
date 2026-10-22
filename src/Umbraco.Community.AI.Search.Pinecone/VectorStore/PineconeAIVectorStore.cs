@@ -13,7 +13,7 @@ namespace Umbraco.Community.AI.Search.Pinecone.VectorStore;
 /// <remarks>
 /// Each Umbraco index is a Pinecone namespace (<c>{NamespacePrefix}{indexName}</c>) and each chunk is one record.
 /// Cultures are filtered with metadata, not namespaces, because a search needs a culture's records and the
-/// invariant ones in a single query. The design is in docs/vector-store-notes.md §4.
+/// invariant ones in a single query.
 /// </remarks>
 internal sealed class PineconeAIVectorStore : IAIVectorStore
 {
@@ -144,7 +144,8 @@ internal sealed class PineconeAIVectorStore : IAIVectorStore
 
     /// <summary>
     /// Lists the matching IDs and deletes them. Pinecone is eventually consistent, so a record written a
-    /// moment ago may not be listed yet; see docs/vector-store-notes.md §5.
+    /// moment ago may not be listed yet. At worst a few chunks from that write are left behind, and the next
+    /// rebuild removes them.
     /// </summary>
     private async Task DeleteByPrefixAsync(string indexName, string prefix, CancellationToken cancellationToken)
     {
