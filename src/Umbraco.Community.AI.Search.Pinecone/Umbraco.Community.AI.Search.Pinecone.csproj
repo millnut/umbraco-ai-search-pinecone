@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>Umbraco.Community.AI.Search.Pinecone</RootNamespace>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- Audit hits come from the transitive packages of our minimum Umbraco version, which a site upgrades
+         by running a newer 18.x. Keep them visible, but don't let them fail the build. -->
+    <WarningsNotAsErrors>$(WarningsNotAsErrors);NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- Public types are documented where it helps; don't fail the build over every member -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Product>Umbraco.Community.AI.Search.Pinecone</Product>
+    <PackageId>Umbraco.Community.AI.Search.Pinecone</PackageId>
+    <Title>Pinecone Vector Store for Umbraco AI Search</Title>
+    <Description>A vector store for Umbraco AI Search that keeps its embeddings in a Pinecone serverless index instead of the CMS database. Works with any Umbraco AI embedding provider.</Description>
+    <PackageTags>umbraco;umbraco-marketplace;umbraco-ai;pinecone;vector-search;search</PackageTags>
+    <Authors>Lee Mills</Authors>
+    <Copyright>$([System.DateTime]::UtcNow.ToString(`yyyy`)) © Lee Mills</Copyright>
+    <PackageProjectUrl>https://github.com/millnut/umbraco-ai-search-pinecone</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/millnut/umbraco-ai-search-pinecone</RepositoryUrl>
+    <PackageReadmeFile>README_nuget.md</PackageReadmeFile>
+    <PackageIcon>icon.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Umbraco.AI.Search.Core" />
+    <!-- Only for UmbracoAISearchComposer, so the composer can replace the vector store it registers -->
+    <PackageReference Include="Umbraco.AI.Search.Startup" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\docs\README_nuget.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\docs\assets\icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <InternalsVisibleTo Include="Umbraco.Community.AI.Search.Pinecone.Tests" />
+  </ItemGroup>
+
+</Project>

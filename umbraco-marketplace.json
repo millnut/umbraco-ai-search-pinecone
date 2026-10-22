@@ -1,0 +1,15 @@
+{
+  "$schema": "https://marketplace.umbraco.com/umbraco-marketplace-schema.json",
+  "AuthorDetails": {
+    "Name": "Lee Mills",
+    "ImageUrl": "https://github.com/millnut.png"
+  },
+  "Category": "Artificial Intelligence",
+  "Description": "A Pinecone vector store for Umbraco AI Search. Keeps your content's embeddings in a Pinecone serverless index instead of the CMS database, with any Umbraco AI embedding provider.",
+  "LicenseTypes": [ "Free" ],
+  "IssueTrackerUrl": "https://github.com/millnut/umbraco-ai-search-pinecone/issues",
+  "PackageType": "Package",
+  "Screenshots": [],
+  "Tags": [ "ai", "pinecone", "search", "vector-search" ],
+  "Title": "Pinecone Vector Store for Umbraco AI Search"
+}
