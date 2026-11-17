@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net11.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Umbraco.Community.AI.Search.Pinecone</RootNamespace>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <!-- Audit hits come from the transitive packages of our minimum Umbraco version, which a site upgrades
-         by running a newer 18.x. Keep them visible, but don't let them fail the build. -->
+         by running a newer 19.x. Keep them visible, but don't let them fail the build. -->
     <WarningsNotAsErrors>$(WarningsNotAsErrors);NU1901;NU1902;NU1903;NU1904</WarningsNotAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <!-- Public types are documented where it helps; don't fail the build over every member -->
